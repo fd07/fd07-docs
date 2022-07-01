@@ -4,9 +4,7 @@ O Teampass é uma ferramenta para armazenamento de senhas de código aberto e f�
 
 ### Instalando e Configurando
 
-
-
-~~~Servidor XAMPP
+~~~ServidorXAMPP
 Caso queira instalar o XAMPP, segue:
 #wget http://sourceforge.net/projects/xampp/files/XAMPP%20Linux/5.5.30/xampp-linux-x64-5.5.30-0-installer.run
 Adicionar permissão 755 (rwxr-xr-x)
@@ -17,7 +15,7 @@ Fonte de instalação do XAMPP
 http://www.vivaolinux.com.br/artigo/Como-instalar-o-XAMPP-no-GNULinux
 ~~~
 
-~~~Servidor LAMP
+~~~ServidorLAMP
 Para iniciar a instalação e configuração, é necessário ter um servidor LAMP (Linux+Apache+MySQL+PHP) instalado. Para isso vamos utilizado o comando abaixo:
 #apt-get install apache2 php5 mysql-client mysql-client-5.5 mysql-server mysql-server-5.5 -y
 ~~~

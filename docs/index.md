@@ -1,19 +1,15 @@
-## Welcome to GitHub Pages
+## [TEAMPASS] - How To
 
-You can use the [editor on GitHub](https://github.com/fd07/docs/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+O Teampass é uma ferramenta para armazenamento de senhas de código aberto e fácil instalação 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Instalando e Configurando
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Primeiramente, é necessário ter um servidor LAMP (Linux+Apache+MySQL+PHP)
 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+
+#apt-get install apache2 php5 mysql-client mysql-client-5.5 mysql-server mysql-server-5.5 -y
 
 - Bulleted
 - List

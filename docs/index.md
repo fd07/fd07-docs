@@ -9,13 +9,10 @@ O Teampass é uma ferramenta para armazenamento de senhas de código aberto e f�
 ~~~Servidor XAMPP
 Caso queira instalar o XAMPP, segue:
 #wget http://sourceforge.net/projects/xampp/files/XAMPP%20Linux/5.5.30/xampp-linux-x64-5.5.30-0-installer.run
-
 Adicionar permissão 755 (rwxr-xr-x)
 #chmod 755 xampp-linux-x64-5.5.30-0-installer.run
-
 Executar instalador:
 #./xampp-linux-blablabla-installer.run 
-
 Fonte de instalação do XAMPP
 http://www.vivaolinux.com.br/artigo/Como-instalar-o-XAMPP-no-GNULinux
 ~~~

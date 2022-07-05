@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages
+## [TEAMPASS] - Cofre de Senhas
 
-You can use the [editor on GitHub](https://github.com/fd07/docs/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+O Teampass é uma ferramenta para armazenamento de senhas de código aberto e fácil instalação 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Instalando e Configurando
 
-### Markdown
+~~~ServidorXAMPP
+Caso queira instalar o XAMPP, segue:
+#wget http://sourceforge.net/projects/xampp/files/XAMPP%20Linux/5.5.30/xampp-linux-x64-5.5.30-0-installer.run
+Adicionar permissão 755 (rwxr-xr-x)
+#chmod 755 xampp-linux-x64-5.5.30-0-installer.run
+Executar instalador:
+#./xampp-linux-blablabla-installer.run 
+Fonte de instalação do XAMPP
+http://www.vivaolinux.com.br/artigo/Como-instalar-o-XAMPP-no-GNULinux
+~~~
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+~~~ServidorLAMP
+Para iniciar a instalação e configuração, é necessário ter um servidor LAMP (Linux+Apache+MySQL+PHP) instalado. Para isso vamos utilizado o comando abaixo:
+#apt-get install apache2 php5 mysql-client mysql-client-5.5 mysql-server mysql-server-5.5 -y
+~~~
+
+*Após instalar o LAMP ou XAMPP e antes de começar a instalar e configurar o TEAMPASS, é necessário criar a base de dados do teampass. Esta por sua vez, será populada durante a instalação.
 
 ```markdown
-Syntax highlighted code block
+Criar base teampass_db:
+#create database teampass_db character set utf8 collate utf8_general_ci;
 
-# Header 1
-## Header 2
-### Header 3
+Adicionar todos os privilégios: (Neste utilizei user teampass e senha TeAmPaSs como no exemplo do site)
+#grant all privileges on teampass_db.* to teampass@localhost identified by 'TeAmPaSs'; (Server (T34mp45S)
 
-- Bulleted
-- List
+Adicionar grant para o ip do localhost também:
+#grant all privileges on teampass_db.* to teampass@'192.168.206.128' identified by 'TeAmPaSs';
 
-1. Numbered
-2. List
+Aplicar privilégios:
+#flush privileges;
 
-**Bold** and _Italic_ and `Code` text
+Feito isso, instalar dependências:
+#apt-get install unzip php5-common php5-mcrypt php5-mysqlnd php5-ldap -y
 
-[Link](url) and ![Image](src)
+Criar e acessar o diretório /downloads
+#mkdir /downloads
+#cd /downloads
+
+Baixar o pacote do TeamPass
+#wget https://github.com/nilsteampassnet/TeamPass/archive/master.zip
+
+Descompactar o arquivo master.zip utilizando o unzip
+#unzip master.zip
+
+Mover o arquivo descompactado (TeamPass-master) para /var/www/html/teampass (altera nome para teampass)
+#mv TeamPass-master /var/www/html/teampass
+
+Alterar o dono do arquivo: (Verificar qual o user e group do seu ambiente)
+#chown -R www-data:www-data teampass
+
+Acessar via browser para continuar a instalação:
+http://{sua_url_ou_ip}/teampass/install/install.php
 ```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fd07/docs/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

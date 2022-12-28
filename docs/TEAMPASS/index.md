@@ -1,6 +1,6 @@
 ## [TEAMPASS][WIP] - Cofre de Senhas
 
-O Teampass é uma ferramenta para armazenamento de senhas de código aberto e fácil instalação 
+O Teampass é uma ferramenta para armazenamento de senhas de código aberto e fácil instalação.
 
 ### Instalando e Configurando
 
